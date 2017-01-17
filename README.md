@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README is intended to document the changes done in the ecomm-me app developed during my web-dev course in CareerFoundry. This app is a learning platform for eCommerce.
 
 Things you may want to cover:
 
