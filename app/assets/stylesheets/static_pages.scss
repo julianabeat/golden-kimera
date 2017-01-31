@@ -1,6 +1,10 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  height: 100%;
+  margin: 0;
+}
 h1 {
 	color: purple;
 	font-family: futura;
@@ -20,20 +24,29 @@ p {
 	height: 50px;
 	background: #e7e7e7;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 14px;
+	font-size: 18px;
+	margin-top: 25px;
 }
-.site-footer ul {
-  -webkit-padding-start: 0;
+.site-footer-links {
+	margin: 0;
+	list-style: none;
+	-webkit-padding-start: 0;
 }
-.site-footer li {
-  display: inline-block;
-  padding: 10px 15px;
+.site-footer-links li {
+	color: #555;
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
-.site-footer a {
-  color: #555;
-  padding: 10px;
+.site-footer-links a {
+	margin-left: -15;
+	padding: 10px 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
-.site-footer p {
-  float: right;
-  color: #555;
+#copy-right {
+	float: right;
+	color: #555;
 }
