@@ -1,16 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Our Bikes</h1>
-<div class="container">
-  <div class="row">
-
-  <%= render @products %>
+  
+  <div class="container-fluid">
     
-  </div> <!-- end row -->
-</div> <!-- end container-fluid -->
+    <div class="row">
+      
+      <%= render @products %>
+    
+    </div> <!-- end row -->
+  
+  </div> <!-- end container-fluid -->
 
 <br>
 
-<button type="button" style="margin-left: 100px"><%= link_to 'New Product', new_product_path %></button>
+<button type="button" style="margin-left: 20px"><%= link_to 'New Product', new_product_path %></button>
 
 

@@ -1,10 +1,10 @@
-    <div class="col-xs-12 col-md-4"> 
+    <div class="col-md-4 col-xs-12"> 
       <h3><%= product.name %></h3>
         
         <%= image_tag(product.image_url, class: "img-responsive") %>
         <p><%= product.description %></p>
         <p><%= product.color %></p>
-        <p><strong><%= product.price %><span class="glyphicon glyphicon-euro"></strong></p>
+        <p><strong><%= product.price %><span class="glyphicon glyphicon-euro"></span></strong></p>
       
       <tr>  
         <td><button type="button"><%= link_to 'Show', product %></button></td>
@@ -12,4 +12,4 @@
         <td><button type="button"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     
-    </div> <!-- end col-md-4 -->
+    </div> <!-- end col -->
