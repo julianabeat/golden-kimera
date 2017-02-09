@@ -24,24 +24,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></a>
+      <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">About us</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Bikes <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Vintage</a></li>
-            <li><a href="#">Urban bikes</a></li>
-            <li><a href="#">Race bikes</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Collectors</a></li>
-          </ul>
-        </li>
+        <li class="active"><%= link_to "Home", landing_page_path %><span class="sr-only">(current)</span></a></li>
+        <li><%= link_to "About us", about_path %></li>
+        <li><%= link_to "Our Bikes", products_path %></li>
       </ul>
       <form class="navbar-form navbar-right hidden-xs">
         <div class="form-group">
@@ -51,12 +42,12 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Sell your Bike</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact <span class="caret"></span></a>
+        <li class="dropdown"> 
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact us<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Phone</a></li>
-            <li><a href="#">Address</a></li>
+            <li><%= link_to "E-mail", contact_path %></li>
+            <li><%= link_to "Phone", contact_path %></li>
+            <li><%= link_to "Locations", contact_path %></a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Our Customers</a></li>
           </ul>

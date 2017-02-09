@@ -7,9 +7,9 @@
         <p><strong><%= product.price %><span class="glyphicon glyphicon-euro"></strong></p>
       
       <tr>  
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button type="button"><%= link_to 'Show', product %></button></td>
+        <td><button type="button"><%= link_to 'Edit', edit_product_path(product) %></button></td>
+        <td><button type="button"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     
     </div> <!-- end col-md-4 -->

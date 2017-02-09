@@ -16,11 +16,26 @@ h2 {
 }
 p {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 18px;
+	font-size: 14px;
+	margin: 15px;
 }
 .img-responsive {
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+.carousel-indicators {
+	padding: 10px;
+	margin: 0 auto 0 auto;
+	-webkit-padding-start: 0;
+	left: 0;
+	width: 100%;
+}
+.carousel-caption p {
+	font-family: futura;
+	text-align: center; 
+	font-size: 18px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
 //Footer
