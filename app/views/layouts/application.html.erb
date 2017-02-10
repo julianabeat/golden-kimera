@@ -14,8 +14,7 @@
   </head>
 
   <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <nav class="navbar navbar-default">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
@@ -24,15 +23,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></a>
+      <a class="navbar-brand"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to "Home", landing_page_path %><span class="sr-only">(current)</span></a></li>
-        <li><%= link_to "About us", about_path %></li>
-        <li><%= link_to "Our Bikes", products_path %></li>
+        <li>
+          <%= link_to "Home", landing_page_path %>
+        </li>
+        <li>
+          <%= link_to "About us", about_path %>
+        </li>
+        <li>
+          <%= link_to "Our Bikes", products_path %>
+        </li>
       </ul>
       <form class="navbar-form navbar-right hidden-xs">
         <div class="form-group">
@@ -54,29 +59,26 @@
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+  </nav>
 
   <%= yield %>
 
   <footer class="site-footer">
-    <div>
-      <ul class="site-footer-links">
-        <a class="footer-brand" href="#"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></a>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li class="hidden-xs">
-          <a href="#">About</a>
-        </li>
-        <li class="hidden-xs"s>
-          <a href="#">Contact</a>
-        </li>
-        <li style="list-style: none; display: inline">
-          <a id="copy-right">&copy; 2017 Bike Berlin</a>
-        </li>
-      </ul>
-    </div>  
+    <ul class="site-footer-links">
+      <a class="footer-brand" ><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></a>
+      <li>
+        <%= link_to "Home", landing_page_path %>
+      </li>
+      <li class="hidden-xs">
+        <%= link_to "About us", about_path %>
+      </li>
+      <li class="hidden-xs">
+        <%= link_to "Contact us", contact_path %>
+      </li>
+      <li style="list-style: none; display: inline">
+        <a id="copy-right">&copy; 2017 Bike Berlin</a>
+      </li>
+    </ul> 
   </footer>
 
   </body>

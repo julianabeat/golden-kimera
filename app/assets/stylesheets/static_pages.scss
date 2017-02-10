@@ -5,6 +5,13 @@ body {
 	height: 100%;
 	margin: 0;
 }
+li a:hover {
+	color: #333;
+    background-color: #e7e7e7;
+}
+.navbar-default li:hover {
+	background-color: #e7e7e7;
+}
 h1 {
 	color: purple;
 	font-family: futura;
@@ -37,11 +44,15 @@ p {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
+.carousel-caption button {
+	margin: 10px;
+}
 
 //Footer
 .site-footer {
 	height: 50px;
-	background: #e7e7e7;
+	background-color: #f8f8f8;
+    border-color: #e7e7e7;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 18px;
 	margin-top: 25px;
@@ -60,7 +71,6 @@ p {
 	padding-bottom: 15px;
 }
 .site-footer-links a {
-	margin-left: -15;
 	padding: 10px 15px;
 	padding-top: 15px;
 	padding-bottom: 15px;
