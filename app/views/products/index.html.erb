@@ -9,11 +9,21 @@
       <%= render @products %>
     
     </div> <!-- end row -->
+
+    <br>
+
+    <button type="button" style="margin-top: 15px"><%= link_to 'New Product', new_product_path %></button>
+
+    <p> </p>
+      <%= link_to 'Home', landing_page_path %> |
+      <%= link_to 'More bikes', products_path %>
+    
   
   </div> <!-- end container-fluid -->
 
 <br>
 
-<button type="button" style="margin-left: 20px"><%= link_to 'New Product', new_product_path %></button>
+
+
 
 
