@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page', to:'static_pages#landing_page', as:'landing_page'
 
+  post 'static_pages/thank_you'
+
   root 'static_pages#landing_page'
 
   resources :orders, only: [:index, :show, :create, :destroy]
