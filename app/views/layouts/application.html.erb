@@ -39,7 +39,14 @@
           <%= link_to "Our Bikes", products_path %>
         </li>
       </ul>
-      
+      <ul class="nav navbar-nav navbar-collapse">
+        <form class="navbar-form collapsed navbar-right">
+          <%= form_tag("/products", method: "get", class: 'navbar-form navbar-right') do %>
+          <%= text_field_tag(:q, nil, class: 'form-control navbar-left', placeholder: "Search our Bikes") %>
+          <%= submit_tag("Go!", class: 'btn btn-default') %>
+          <% end %>
+        </form>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Sell your Bike</a></li>
         <li class="dropdown"> 
@@ -52,15 +59,19 @@
             <li><a href="#">Our Customers</a></li>
           </ul>
         </li>
-      </ul>
-        <form class="navbar-form collapsed navbar-right">
-          <%= form_tag("/products", method: "get", class: 'navbar-form navbar-right') do %>
-          <%= text_field_tag(:q, nil, class: 'form-control navbar-left', placeholder: "Search") %>
-          <%= submit_tag("Go!", class: 'btn btn-default') %>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path) %>
           <% end %>
-        </form>
+        </li>
+      </ul>
     </div><!-- /.navbar-collapse -->
   </nav>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
   <%= yield %>
 
