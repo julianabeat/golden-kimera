@@ -1,14 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<h1>Personal Information</h1>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+<div class="container"> 
+
+
+  <p><strong>First name:</strong></p>
+  <p><%= @user.first_name %></p>
+
+
+
+  <p><strong>Last name:</strong></p>
+  <p><%= @user.last_name %></p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+</div> <!-- end container-->

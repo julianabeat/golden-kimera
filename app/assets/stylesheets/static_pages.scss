@@ -54,6 +54,9 @@ p {
 }
 
 //Footer
+.footer-brand {
+	margin:15px;
+}
 .site-footer {
 	height: 50px;
 	background-color: #f8f8f8;
@@ -69,6 +72,9 @@ p {
 	margin: 0;
 	list-style: none;
 	-webkit-padding-start: 0;
+}
+.site-footer-nav ul {
+	-webkit-margin-after: 0;
 }
 .site-footer-links li {
 	color: #555;
