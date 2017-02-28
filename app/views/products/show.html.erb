@@ -23,14 +23,27 @@
 
       <p>
         <strong>Price:</strong>
-        <%= @product.price %>
+        <%= @product.price %><span class="glyphicon glyphicon-euro"></span>
       </p>
 
-      <p>
+      <p class="hidden">
         <strong>Image url:</strong>
         <%= @product.image_url %>
       </p>
     </div> <!-- end col-md-12 -->
+
+    <div class="col-md-6 col-xs-12">
+
+      <h2>Best Review:</h2>
+        <p class="lead text-uppercase" style="text-align: center;font-size: 16px;"><%= @product.highest_rating_comment.body %> <span class="glyphicon glyphicon-thumbs-up"></span></p>
+        <p style="text-align: center; font-size: 14px;"><%= @product.highest_rating_comment.rating %> <span class="glyphicon glyphicon-star"></span></p>
+
+        <h2 style="font-size: 16px;">Not so good review:</h2>
+        <p class="lead text-uppercase" style="text-align: center;font-size: 16px;"><%= @product.lowest_rating_comment.body %> <span class="glyphicon glyphicon-thumbs-down"></span></p>
+        <p style="text-align: center; font-size: 14px;"><%= @product.lowest_rating_comment.rating %> <span class="glyphicon glyphicon-star"></span></p>
+
+    </div> <!-- end col-md-12 -->
+
   </div> <!-- end row -->
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
