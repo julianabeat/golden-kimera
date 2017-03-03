@@ -4,15 +4,25 @@
   <div class="row">
     <div class="col-md-6 col-xs-12">
 
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
-      
-      <p>
-        <strong>Name:</strong>
-        <%= @product.name %>
-      </p>
+    <%= image_tag(@product.image_url, class: "img-responsive") %>
+
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Home', landing_page_path %> |
+      <%= link_to 'More bikes', products_path %>
+
+      <div class="container" style="margin:15px;">
+        <%= render 'comments/new_comment' %>
+        <%= render 'comments/comments' %>
+      </div>
+    </div> <!-- end col-md-12 -->
+
+    <div class="col-md-6 col-xs-12">
+
+      <h3>
+        <strong><%= @product.name %></strong>
+      </h3>
 
       <p>
-        <strong>Description:</strong>
         <%= @product.description %>
       </p>
     
@@ -30,28 +40,12 @@
         <strong>Image url:</strong>
         <%= @product.image_url %>
       </p>
-    </div> <!-- end col-md-12 -->
-
-    <div class="col-md-6 col-xs-12">
-
-    <% if @product.comments.present? %> 
-      <h2>Best Review:</h2>
-        <p class="lead text-uppercase" style="text-align: center;font-size: 16px;"><%= @product.highest_rating_comment.body %> <span class="glyphicon glyphicon-thumbs-up"></span></p>
-        <p style="text-align: center; font-size: 14px;"><%= @product.highest_rating_comment.rating %> <span class="glyphicon glyphicon-star"></span></p>
-
-        <h2 style="font-size: 16px;">Not so good review:</h2>
-        <p class="lead text-uppercase" style="text-align: center;font-size: 16px;"><%= @product.lowest_rating_comment.body %> <span class="glyphicon glyphicon-thumbs-down"></span></p>
-        <p style="text-align: center; font-size: 14px;"><%= @product.lowest_rating_comment.rating %> <span class="glyphicon glyphicon-star"></span></p>
-    <% else %>
-        <p> No comments available </p>
-    <% end %>
+      
+      <p><strong>Average Rating:</strong></p>
+      <p><div class="rated" style="padding-left: 15px;" data-score="<%= @product.average_rating %>"></div></p>
 
     </div> <!-- end col-md-12 -->
 
   </div> <!-- end row -->
-
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Home', landing_page_path %> |
-  <%= link_to 'More bikes', products_path %>
 
 </div> <!-- end container-fluid -->
