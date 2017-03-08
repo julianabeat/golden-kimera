@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6 col-xs-12">
+    <div class="col-md-6 col-xs-6">
 
     <%= image_tag(@product.image_url, class: "img-responsive") %>
 
@@ -8,18 +8,9 @@
       <%= link_to 'Home', landing_page_path %> |
       <%= link_to 'More bikes', products_path %>
 
+    </div> <!-- end col-md-6 -->
 
-      <div class="container-fluid">
-        <%= render 'comments/new_comment' %>
-        <%= render 'comments/comments' %>
-
-          <%= will_paginate @comments %>
-
-      </div>
-
-    </div> <!-- end col-md-12 -->
-
-    <div class="col-md-6 col-xs-12">
+    <div class="col-md-4 col-xs-4">
 
       <h3>
         <strong><%= @product.name %></strong>
@@ -46,9 +37,16 @@
       
       <p><strong>Average Rating:</strong></p>
       <p><div class="rated" style="padding-left: 15px;" data-score="<%= @product.average_rating %>"></div></p>
-
-    </div> <!-- end col-md-12 -->
-
+    </div> <!-- end col-md-6 -->
   </div> <!-- end row -->
+
+  <div class="container-fluid row">
+    <div class="col-md-6 col-xs-6">
+        <%= render 'comments/new_comment' %>
+        <%= render 'comments/comments' %>
+
+        <%= will_paginate @comments %>
+    </div>
+  </div>
 
 </div> <!-- end container-fluid -->
