@@ -41,6 +41,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   #Use Rail Controller for testins controllers
   gem 'rails-controller-testing'
+  #USe FactoryGirl
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
