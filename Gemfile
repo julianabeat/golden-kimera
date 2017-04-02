@@ -31,6 +31,8 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 #Use will_paginate for divide content in pages. Read more: https://github.com/mislav/will_paginate#basic-will_paginate-use
 gem 'will_paginate', '~> 3.1.1'
+#Use Stripe for online payments
+gem 'stripe'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
