@@ -3,9 +3,13 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-  def index    
+  def index  
+
     if params[:q]
     search_term = params[:q]
+       
+       logger.debug "search term : #{search_term}"
+      
       if Rails.env.production?
         @products = Product.where("name ilike ?", "%#{search_term}%")
         # return our filtered list here
