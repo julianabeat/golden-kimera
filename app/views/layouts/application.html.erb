@@ -44,8 +44,8 @@
       <ul class="nav navbar-nav navbar-collapse">
         <form class="navbar-form collapsed navbar-right">
           <%= form_tag("/products", method: "get", class: 'navbar-form navbar-right') do %>
-          <%= text_field_tag(:q, nil, class: 'form-control navbar-left', placeholder: "Search our Bikes") %>
-          <%= submit_tag("Go!", class: 'btn btn-default') %>
+            <%= text_field_tag(:q, nil, class: 'form-control navbar-left', placeholder: "Search our Bikes") %>
+            <%= submit_tag("Go!", class: 'btn btn-default') %>
           <% end %>
         </form>
       </ul>
