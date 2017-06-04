@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-6 col-xs-6">
 
-    <%= image_tag(@product.image_url, class: "img-responsive") %>
+    <%= image_tag(@product.image_url, class: "img-zoom img-thumbnail product_image", data_zoom_image: @product.image_url) %>
 
       <%= link_to 'Edit', edit_product_path(@product) %> |
       <%= link_to 'Home', landing_page_path %> |
